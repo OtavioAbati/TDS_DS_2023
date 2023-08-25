@@ -1,12 +1,12 @@
-/* body {
-    background-color: whitesmoke;
-    padding: 0px;
-    margin: 0px;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('./Open_Sans/static/OpenSans-Light.ttf');
+  }
+
+body{
     display: flex;
-    min-height: 100vh;
-} */
+    background-color: #fff;
+}
 
 .card {
     background-color: rgba(19, 19, 19, 0.2);
@@ -17,24 +17,26 @@
 
 .perfil img{
     display: flex;
-    margin-top: -500px;
-    margin-right: 200px;
+    margin-top: -680px;
+    margin-right: 150px;
     padding: 40px;
     float: right;
     height: 350px;
-    width: 350px;
+    width: 480px;
+    border-radius: 45px;
 }
 
 .area-centro{
     text-align: center;
     margin-top: 0px;
     font-size: 1.5em;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 .header h2{
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     display: flex;
     line-height: 80px;
     box-sizing: border-box;
@@ -42,7 +44,7 @@
 }
 
 .text-header h2{
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     display: flex;
     line-height: 80px;
     box-sizing: border-box;
@@ -50,7 +52,7 @@
 }
 
 .text h2{
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     display: flex;
     line-height: 80px;
     box-sizing: border-box;
@@ -59,34 +61,63 @@
 
 .header p{
     margin-top: -30px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     width: 30%;
-    letter-spacing: -1px;
     font-size: 20px;
     margin-left: 200px;
-    color: #d1d1d1;
+    color: #877c7c;
 }
 
 .text-header p{
     margin-top: -30px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     width: 30%;
-    letter-spacing: -1px;
     font-size: 20px;
     margin-left: 200px;
-    color: #d1d1d1;
+    color: #877c7c;
 }
 
 .text p{
     margin-top: -30px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans Light', light;
     width: 30%;
-    letter-spacing: -1px;
     font-size: 20px;
     margin-left: 200px;
-    color: #d1d1d1;
+    color: #877c7c;
 }
 
-.span{
-    text-decoration: none;
+.area-esquerda{
+    margin-left: 40px;
 }
+
+.container{
+    display: flex;
+    margin-top: -290px;
+    margin-right: 185px;
+    float: right;
+    height: 350px;
+    width: 480px;
+}
+
+.container h3{
+    text-transform: capitalize;
+    font-family: 'Open Sans Light', light;
+    font-size: 40px;
+}
+
+.container h2{
+    font-family: 'Open Sans Light', light;
+    margin-top: 100px;
+    margin-left: -145px;
+    font-size: 60px;
+}
+
+.text-footer{
+    margin-top: 30px;
+    margin-left: 200px;
+    font-family: 'Open Sans Light', light;
+    text-transform: capitalize;
+    color: rgb(214, 194, 168);
+} 
+
+
