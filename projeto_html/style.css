@@ -6,13 +6,8 @@
 body{
     display: flex;
     background-color: #fff;
-}
-
-.card {
-    background-color: rgba(19, 19, 19, 0.2);
-    padding: 40px;
-    border-radius: 10px;
-    width: 360px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .perfil img{
@@ -28,11 +23,11 @@ body{
 
 .area-centro{
     text-align: center;
-    margin-top: 0px;
     font-size: 1.5em;
     font-family: 'Open Sans Light', light;
     letter-spacing: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    color: black;
 }
 
 .header h2{
@@ -120,4 +115,62 @@ body{
     color: rgb(214, 194, 168);
 } 
 
+nav{
+    background-color: #2f323a;
+    width: 235px;
+    height: 100%;
+    position: fixed;
+    margin-top: 0px;
+    padding-top: 30px;
+    transition-delay: 0.8s;
+}
 
+nav a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding-left: 23px;
+    line-height: 95px;
+    margin-top: 70px;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    background-color: #cbc4c4;
+    transition: 1.0s;
+}
+
+#btnMenu:hover{
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+#chkMenu{
+    display: none;
+}
+
+#btnMenu{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    position: fixed;
+    left: 12px;
+    top: 25px;
+}
+
+#chkMenu:checked~nav{
+    left: -190px;
+}
+
+#chkMenu:checked~nav a{
+    font-size: 22px;
+    margin-left: 175px;
+}
+
+#chkMenu:checked~nav span{
+    display: none;
+}
+
+#chkMenu:checked~nav a span{
+    transition-delay: 2.0s;
+}
