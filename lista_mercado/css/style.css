@@ -192,3 +192,29 @@ li{
 .item-rad span:hover{
     color: var(--color-primary);
 }
+
+/* MOBILE */
+@media(max-width: 452px){
+    body{
+        background-color: var(--color-secondary);
+    }
+
+    .card{
+        margin-top: 0;
+        width: 100%;
+        filter: none;
+    }
+
+    .card-content{
+        height: 63vh;
+    }
+
+    .card-button{
+        bottom: 3vh;
+    }    
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+}
