@@ -1,0 +1,106 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, sans-serif;
+  }
+  header {
+    
+    background-color: #ffffff;
+    color: rgb(34, 33, 33);
+    width: 100%;
+    height: 60px; 
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 10px 15px; 
+    box-shadow: 0px 0px 15px rgba(3, 0, 25, 0.196);
+  }
+  
+  .logo {
+    text-align: center;
+    font-size: 18px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -1px; 
+    color: #7e71e2;
+  }
+  .menu {
+    text-align: center;
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .menu a {
+    color: rgb(34, 33, 33); 
+    text-decoration: none;
+    margin: 0 30px;
+  }
+  .botao-login {
+    background-color: #7e71e2;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 40px;
+    text-decoration: none;
+  }
+  
+  .botao-conteudo{
+    color: white;
+  }
+  
+  .botao-login:hover {
+    background-color: #ba9dff;
+  }
+  
+  .conteudo h1{
+    text-align: center;
+    justify-content: center;
+    color: black;
+    margin-top: 190px;
+    /* margin-left: 555px; */
+    /* width: 40%; */
+    font-size: 45px;
+  }
+  .p1{
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+  }
+  
+  .p2{
+    text-align: center;
+    justify-content: center;
+    margin-top: -20px;
+    /* margin-left: 649px; */
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+  
+  .botao-saibamais .botao-conteudo-main{
+    margin-top: 55px;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
