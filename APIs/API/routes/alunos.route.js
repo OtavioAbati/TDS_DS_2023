@@ -1,23 +1,13 @@
 const express = require('express');
-const { listaAlunos, buscaAlunorPorId } = require('../controller/alunos.controller');
+const { listaAlunos, buscaAlunorPorId, inserir, atualizar, deletar} = require('../controller/alunos.controller');
 const routes = new express.Router();
 
 
 routes.get("/", listaAlunos);
-
-routes.get("/notas", (request, response)=>{
-    response.send("Notas");
-});
-
-routes.get("/livros", (request, response)=>{
-    response.send("Livros");
-});
-
-routes.get("/perfil", (request, response)=>{
-    response.send("Perfil");
-});
-
+routes.post("/", inserir);
+routes.put("/(:id([0-9]+))", atualizar)
 routes.get("/(:id([0-9]+))", buscaAlunorPorId);
+routes.delete("/(:id([0-9]+))", deletar);
 
 
 //Tudo oq tiver de modules será exportado para outro arquivo
