@@ -1,21 +1,11 @@
 const express = require('express');
+const { listaProfessores, inserir, update, buscaProfessorPorId, deleteProf } = require('../controller/professores.controller');
 const routes = new express.Router();
 
-
-routes.get("/", (request, response)=>{
-    response.send("Professores");
-})
-
-routes.get("/notas", (request, response)=>{
-    response.send("Notas");
-})
-
-routes.get("/atividade", (request, response)=>{
-    response.send("Atividade");
-})
-
-routes.get("/material", (request, response)=>{
-    response.send("Material");
-})
+routes.get("/", listaProfessores);
+routes.post("/", inserir);
+routes.put("/(:id([0-9]+))", update);
+routes.get("/(:id([0-9]+))", buscaProfessorPorId);
+routes.delete("/(:id([0-9]+))", deleteProf);
 
 module.exports = routes;

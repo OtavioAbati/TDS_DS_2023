@@ -1,6 +1,5 @@
 const { buscaTodos, buscaAlunoPorId, inserir, atualizar, deletar } = require("../repository/alunos.repository")
 
-
 module.exports = {
     listaAlunos: (req, res)=>{
 
