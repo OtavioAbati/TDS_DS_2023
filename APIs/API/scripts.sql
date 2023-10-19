@@ -1,5 +1,7 @@
 create database apiDB;
 
+use apiDB;
+
 CREATE TABLE `alunos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -33,3 +35,5 @@ INSERT INTO apiDB.alunos (id, nome, idade, email) VALUES(4, 'Diego', 16, NULL);
 INSERT INTO apiDB.alunos (id, nome, idade, email) VALUES(5, 'Otávio', 16, NULL);
 
 INSERT INTO apiDB.professor (id, nome, materia) VALUES(1, 'Guilherme Pires', 'DEV');
+
+INSERT INTO apiDB.turmas (id, professor_id, aluno_id) VALUES(1, 1, 1);
