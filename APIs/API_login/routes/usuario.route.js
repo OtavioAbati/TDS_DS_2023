@@ -7,6 +7,6 @@ routes.get("/", buscarUsuario);
 routes.get("/(:id([0-9]+))", buscaUserID);
 routes.post("/", insert);
 routes.put("/(:id([0-9]+))", update);
-routes.delete("/(:id([0-9]+))", del)
+routes.delete("/(:id([0-9]+))", del);
 
 module.exports = routes;

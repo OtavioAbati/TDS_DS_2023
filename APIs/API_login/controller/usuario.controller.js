@@ -16,6 +16,7 @@ module.exports = {
         buscaUsuarioPorID(id).then((data)=>{
             res.send(data);
         }).catch((error)=>{
+            console.log(error);
             res.status(500).send({message: "Erro ao consultar por ID!"});
         })
      },
@@ -27,7 +28,7 @@ module.exports = {
             res.status(200).send({message: "Usuario inserido com sucesso!", data})
         }).catch((error)=>{
             console.log(error);
-            res.status(500).send({message: "Erro ao inserir aluno!"})
+            res.status(500).send({message: "Erro ao inserir usuario!"})
         })
      },
 
@@ -37,11 +38,12 @@ module.exports = {
 
         if (data.id){
             res.status(400).send({message: "Não é possível enviar o parâmetro ID!"});
-        }
+        }   
 
         atualizar(id, data).then((data)=>{
             res.status(200).send({message: "Sucesso ao atualizar!"})
         }).catch((error)=>{
+            console.log(error);
             res.status(500).send({message: "Erro ao atulizar"})
         })
      },

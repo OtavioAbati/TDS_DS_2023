@@ -1,4 +1,4 @@
-const conn = require('../mysqk.knex');
+const conn = require('../mysql.knex');
 
 module.exports = {
     listaUsuarios: async() =>{
@@ -6,20 +6,20 @@ module.exports = {
         //SELECT FROM * USUARIO;
     },
 
-    buscaUsuarioPorID: async() =>{
+    buscaUsuarioPorID: async(id) =>{
         return await conn.select().from("usuario").where({id:id});
         //SELECT * FROM USUARIO WHERE ID = ID;
     },
 
-    inserir: async() =>{
+    inserir: async(data) =>{
         return await conn.insert(data).into("usuario");
     },
 
-    atualizar: async()=>{
+    atualizar: async(id, data)=>{
         return await conn("usuario").update(data).where({id:id});
     },
-
-    deletar: async()=>{
+ 
+    deletar: async(id)=>{
         return await conn("usuario").where({id:id}).del();
     }
 }
