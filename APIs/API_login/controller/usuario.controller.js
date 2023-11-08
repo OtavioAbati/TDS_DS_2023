@@ -1,4 +1,4 @@
-const { listaUsuarios, buscaUsuarioPorID, inserir, atualizar, deletar } = require('../repository/usuario.repository')
+const { listaUsuarios, buscaUsuarioPorID, inserir, atualizar, deletar, loginUsuario } = require('../repository/usuario.repository')
 
 module.exports = {
     buscarUsuario: (req, res)=>{
@@ -57,6 +57,19 @@ module.exports = {
             console.log(error)
             res.status(500).send({message: "Erro ao deletar usuário!"})
         })
-     }
+     },
 
+     login: async (req, res)=>{
+        const {user_name, senha} = req.body
+
+        const user = await loginUsuario();
+
+        if(senha == usuario.senha){
+            if(user_name == usuario.user_name){
+                res.send({message: "Login realizado com sucesso!"})
+            }
+        }else{
+            res.send({message: "Erro ao realizar login!"});
+        };
+     }
 }
