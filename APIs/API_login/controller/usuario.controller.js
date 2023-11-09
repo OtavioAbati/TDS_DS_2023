@@ -71,5 +71,17 @@ module.exports = {
         }else{
             res.send({message: "Erro ao realizar login!"});
         };
+     },
+
+     esqueceuSenha: async (req, res)=>{
+        const {email} = req.body;
+
+        const user = await conn.select().from("usuario").where({email:email});
+
+        const chave = Math.floor(Math.random() * 100);
+
+        await conn.insert(user.id, chave).into("rec_senha");
+        
+        res.send({chave});
      }
 }
