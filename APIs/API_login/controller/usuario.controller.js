@@ -83,5 +83,33 @@ module.exports = {
         await conn.insert(user.id, chave).into("rec_senha");
         
         res.send({chave});
+     },
+
+     novaSenha: async (req, res)=>{
+        const {chave, nova_senha} = req.body;
+
+        const chaveUser = await conn.select().from("rec_senha");
+
+        if(chave){
+            res.status(200).send({message: "Chave encontrada com sucesso!"});
+        }
+        else{
+            res.status(200).send({message: "Erro ao encontrar a chave!"});
+        }
+
+        atualizarSenha(chaveUser.user_id, nova_senha).then((data)=>{
+            res.send(data);
+        }).catch((error)=>{
+            console.log(error);
+            res.status(500).send({message: "Erro ao atualizar a senha"});
+        })
+
+        deletarSenha(chaveUser.id).then((data)=>{
+            res.status(200).send({message: "Sucesso ao deletar senha!"})
+        }).catch((error)=>{
+            console.log(error)
+            res.status(500).send({message: "Erro ao deletar a senha!"})
+        })
+
      }
 }
